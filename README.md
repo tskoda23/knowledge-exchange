@@ -19,7 +19,7 @@ Preduvjeti
 -----------------
 - server koji podržava php
 - mysql baza podataka
-- za lokalno testiranje **xampp** je prilično kul
+- za lokalno testiranje ću koristiti **xampp**
 - **openshift** nudi i mysql i php hosting besplatno 
 
 Mogućnosti/funkcionalnosti
