@@ -31,6 +31,14 @@ Mogućnosti/funkcionalnosti
 - sustav će im omogućiti komunikaciju (direktno porukama i postavljanje pitanja kao na [StackExchange](http://stackexchange.com/))
 - dijeljenje materijala (datoteke, poveznice, slike)
 
-Tko su korisnici sustava
----------------------------------
--
+
+
+
+
+
+
+
+
+
+
+
