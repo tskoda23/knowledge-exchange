@@ -10,9 +10,9 @@ Aplikacija za razmjenu materijala i znanja između studenata.
 
 Tehnologije
 -------------
--**php**
--**MySql**
--**Bootstrap**
+- **php**
+- **MySql**
+- **Bootstrap**
 - ostalo kao i obično (html5, css3, jquery, javascript)
 
 Preduvjeti
