@@ -1,6 +1,8 @@
 <?php
 session_start();
 include_once 'dbconnect.php';
+include ('header.php');
+include ('footer.php');
 if(isset($_SESSION['id'])!="")
 {
 	header("Location: home.php");
@@ -27,39 +29,21 @@ if(isset($_POST['btn-login']))
 		<script>alert('pogrešni podaci');</script>
 		<?php
 	}
-	
 }
+
+printHeader("Prijava",0, false); //false je da se ne prikaze nav
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Login i registracija</title>
-	<link rel="stylesheet" href="style.css" type="text/css" />
-</head>
-<body>
-	<center>
-		<h1>Prijava</h1>
-		<div id="login-form">
-			<form method="post" action="index.php">
-				<table align="center" width="30%" border="0">
-					<tr>
-						<td><input type="text" name="username" placeholder="korisničko ime" required /></td>
-					</tr>
-					<tr>
-						<td><input type="password" name="password" placeholder="lozinka" required /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" name="btn-login" value="Prijavi se"></td>
-					</tr>
-					<tr>
-						<td><a href="registracija.php">Registriraj se</a></td>
-					</tr>
-				</table>
-			</form>
-		</div>
-	</center>
-</body>
-</html>
+    <div class="container">
+      <form class="form-signin" method="post" action="index.php">
+        <h2 class="form-signin-heading">Prijava</h2>
+        <label for="inputUser" class="sr-only">Korisničko ime</label>
+        <input type="text" id="inputUser" class="form-control" placeholder="Korisničko ime" name="username" required autofocus>
+        <label for="inputPassword" class="sr-only">Lozinka</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" name="btn-login" value="Prijavi se">
+        <a href="Registracija.php">Nemate račun? Registrirajte se.</a>
+      </form>
+    </div> <!-- /container -->
 <?php
+
 ?>
