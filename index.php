@@ -9,17 +9,18 @@ if(isset($_SESSION['id'])!="")
 }
 if(isset($_POST['btn-login']))
 {
-	
+
 	$username = $mysqli->real_escape_string($_POST['username']);
 	$password = $mysqli->real_escape_string($_POST['password']);
 	$res = $mysqli->query("SELECT * FROM mdl_user WHERE username='$username'");
-	
+
 	if($res){
 		$row = mysqli_fetch_array($res);
-		
+
 	if(password_verify ( $password, $row['password']))
 	{
 		$_SESSION['id'] = $row['id'];
+        $_SESSION['user'] = $username;
 		header("Location: home.php");
 	}
 	}

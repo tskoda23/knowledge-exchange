@@ -9,6 +9,9 @@ if(!isset($_SESSION['id']))
     header("Location: index.php");
 }
 
+if(!empty($_GET['ukloni'])){
+    $mysqli->query("DELETE FROM mdl_user_course where course_id = ".$_GET['ukloni']."");
+}
 
 $res=$mysqli->query("SELECT * FROM mdl_user WHERE id=".$_SESSION['id']);
 $userRow=mysqli_fetch_array($res);
@@ -21,8 +24,8 @@ function puni_znalce($course_id){
                             INNER JOIN mdl_user
                             ON mdl_user.id = mdl_user_course.user_id
                             WHERE mdl_course.id =".$course_id."
-                            AND mdl_user_course.user_id = ".$_SESSION['id']."
-                            AND znam = 0");
+                            AND mdl_user_course.user_id != ".$_SESSION['id']."
+                            AND znam = 1");
 
     if ($result->num_rows > 0) {
     // output data of each row
@@ -47,7 +50,7 @@ function puni_neznam(){
     // output data of each row
         while($row = $result->fetch_assoc()) {
 
-                echo "<tr><td> " . $row["shortname"]. "</td><td><a href=\"znam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
+                echo "<tr><td> " . $row["shortname"]. "</td><td><a href=\"neznam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
 \"></i></a></td></tr>";
                 puni_znalce($row['id']);
         }

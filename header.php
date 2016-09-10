@@ -86,7 +86,9 @@ function printHeader($title,$active=0, $nav = true){
 							}
 							?>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
+
+						  <ul class="nav navbar-nav navbar-right">
+                            <li><a class="nohover"><?php echo $_SESSION['user']?></a></li>
 							<li><a href="logout.php?logout">Odjava</a></li>
 						</ul>
 					</div><!--/.nav-collapse -->
