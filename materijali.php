@@ -17,7 +17,7 @@ function provjeri_postoji_li($course){
 							WHERE course_id = $course
 							AND user_id = ".$_SESSION['id']);
 	if($result->num_rows>0){
-		return true; 
+		return true;
 	}else{
 		return false;
 	}
@@ -25,16 +25,16 @@ function provjeri_postoji_li($course){
 
 function puni_za_poznate(){
 	include 'dbconnect.php';
-	$result=$mysqli->query("SELECT id,fullname FROM mdl_course
+	$result=$mysqli->query("SELECT id,shortname FROM mdl_course
 						    LIMIT 10");
 
 	if ($result->num_rows > 0) {
     // output data of each row
     	while($row = $result->fetch_assoc()) {
     		if (provjeri_postoji_li($row['id'])){
-    		echo "<tr class=\"known\" data-id=\"".$row['id']."\"><td> " . $row["fullname"]. "</td></tr>";
+    		echo "<tr class=\"known\" data-id=\"".$row['id']."\"><td> " . $row["shortname"]. "</td></tr>";
     		}else{
-        	 echo "<tr data-id=\"".$row['id']."\"><td> " . $row["fullname"]. "</td></tr>";
+        	 echo "<tr data-id=\"".$row['id']."\"><td> " . $row["shortname"]. "</td></tr>";
         	}
     	}
 	} else {
@@ -44,15 +44,15 @@ function puni_za_poznate(){
 
 function puni_za_nepoznate(){
 	include 'dbconnect.php';
-	$result=$mysqli->query("SELECT id,fullname FROM mdl_course");
+	$result=$mysqli->query("SELECT id,shortname FROM mdl_course");
 
 	if ($result->num_rows > 0) {
     // output data of each row
     	while($row = $result->fetch_assoc()) {
     		if (provjeri_postoji_li($row['id'])){
-    		//echo "<tr data-id=\"".$row['id']."\"><td> " . $row["fullname"]. "</td></tr>";
+    		//echo "<tr data-id=\"".$row['id']."\"><td> " . $row["shortname"]. "</td></tr>";
     		}else{
-        	echo "<tr data-id=\"".$row['id']."\"><td> " . $row["fullname"]. "</td></tr>";
+        	echo "<tr data-id=\"".$row['id']."\"><td> " . $row["shortname"]. "</td></tr>";
         	}
     	}
 	} else {
