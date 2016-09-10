@@ -1,7 +1,7 @@
 knowledge-exchange
 ===================
 
-Aplikacija za razmjenu materijala i znanja između studenata.
+Aplikacija za razmjenu znanja između studenata.
 
 
 
@@ -20,7 +20,7 @@ Preduvjeti
 - server koji podržava php
 - mysql baza podataka
 - za lokalno testiranje ću koristiti **xampp**
-- **openshift** nudi i mysql i php hosting besplatno 
+- **openshift** nudi i mysql i php hosting besplatno
 
 Mogućnosti/funkcionalnosti
 ---------------------------------------
@@ -28,8 +28,7 @@ Mogućnosti/funkcionalnosti
 - Kako to postići?
 - sustav knowledge-exchange vodi brigu o tome
 - studenti u sustav zabilježavaju za koja područja nude znanje i za koja područja traže znanje
-- sustav će im omogućiti komunikaciju (direktno porukama i postavljanje pitanja kao na [StackExchange](http://stackexchange.com/))
-- dijeljenje materijala (datoteke, poveznice, slike)
+- sustav će im omogućiti da se pronađu
 
 
 

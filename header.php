@@ -1,4 +1,4 @@
-<?php 
+<?php
 function printHeader($title,$active=0, $nav = true){
 	?>
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,34 +28,60 @@ function printHeader($title,$active=0, $nav = true){
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<?php 
+							<?php
 							switch ($active) {
 								case 1:
 								?>
-								<li class="active"><a href="home.php">Korisnička</a></li><!--home -->
-								<li><a href="poruke.php">Poruke</a></li>
-								<li><a href="materijali.php">Materijali</a></li>
+								<li class="active"><a href="home.php">Svi Predmeti</a></li><!--home -->
+                                <li><a href="znam.php">Znam</a></li>
+                                <li><a href="neznam.php">Neznam</a></li>
+								<!-- <li><a href="poruke.php">Poruke</a></li> -->
+								<<!-- li><a href="materijali.php">Materijali</a></li> -->
 								<?php
 								break;
 								case 2:
 								?>
-								<li><a href="home.php">Korisnička</a></li><!--home -->
-								<li class="active"><a href="poruke.php">Poruke</a></li>
-								<li><a href="materijali.php">Materijali</a></li>
+								<li><a href="home.php">Svi Predmeti</a></li><!--home -->
+								<!-- <li class="active"><a href="poruke.php">Poruke</a></li> -->
+                                <li><a href="znam.php">Znam</a></li>
+                                <li><a href="neznam.php">Neznam</a></li>
+								<<!-- li><a href="materijali.php">Materijali</a></li> -->
 								<?php
 								break;
 								case 3:
 								?>
-								<li><a href="home.php">Korisnička</a></li><!--home -->
-								<li><a href="poruke.php">Poruke</a></li>
-								<li class="active"><a href="materijali.php">Materijali</a></li>
+								<li><a href="home.php">Svi Predmeti</a></li><!--home -->
+								<!-- <li><a href="poruke.php">Poruke</a></li> -->
+                                <li><a href="znam.php">Znam</a></li>
+                                <li><a href="neznam.php">Neznam</a></li>
+								<!-- <li class="active"><a href="materijali.php">Materijali</a></li> -->
 								<?php
 								break;
+                                case 4:
+                                ?>
+                                <li><a href="home.php">Svi Predmeti</a></li><!--home -->
+                                <!-- <li><a href="poruke.php">Poruke</a></li> -->
+                                <li class="active"><a href="znam.php">Znam</a></li>
+                                <li><a href="neznam.php">Neznam</a></li>
+                                <<!-- li><a href="materijali.php">Materijali</a></li> -->
+                                <?php
+                                break;
+                                case 5:
+                                ?>
+                                <li><a href="home.php">Svi Predmeti</a></li><!--home -->
+                                <!-- <li><a href="poruke.php">Poruke</a></li> -->
+                                <li><a href="znam.php">Znam</a></li>
+                                <li class="active"><a href="neznam.php">Neznam</a></li>
+                                <<!-- li><a href="materijali.php">Materijali</a></li> -->
+                                <?php
+                                break;
 								default:
 								?>
-								<li><a href="home.php">Korisnička</a></li><!--home -->
-								<li><a href="poruke.php">Poruke</a></li>
-								<li><a href="materijali.php">Materijali</a></li>
+								<li><a href="home.php">Svi Predmeti</a></li><!--home -->
+								<!-- <li><a href="poruke.php">Poruke</a></li> -->
+                                <li><a href="znam.php">Znam</a></li>
+                                <li><a href="neznam.php">Neznam</a></li>
+								<<!-- li><a href="materijali.php">Materijali</a></li> -->
 								<?php
 							}
 							?>

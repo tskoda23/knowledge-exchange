@@ -14,9 +14,9 @@ if(isset($_POST['btn-signup']))
 	$firstname = $mysqli->real_escape_string($_POST['firstname']);
 	$lastname = $mysqli->real_escape_string($_POST['lastname']);
 	$email = $mysqli->real_escape_string($_POST['email']);
-	
-	
-	if ($mysqli->query("INSERT INTO mdl_user(confirmed, username, password, firstname, lastname, email) 
+
+
+	if ($mysqli->query("INSERT INTO mdl_user(confirmed, username, password, firstname, lastname, email)
 		VALUES(1, '$username', '$password', '$firstname', '$lastname', '$email')") === TRUE) {
 		?>
 	<script>location.href="index.php"</script>
@@ -31,14 +31,14 @@ printHeader("Registracija",0,false);
 ?>
 <script type="text/javascript">
 	$(document).ready(function() {
-		var x_timer;    
+		var x_timer;
 		$("#inputUser").keyup(function (e){
 			clearTimeout(x_timer);
 			var user_name = $(this).val();
 			x_timer = setTimeout(function(){
 				check_username_ajax(user_name);
 			}, 1000);
-		}); 
+		});
 
 		function check_username_ajax(username){
 			$.post('username-checker.php', {'username':username}, function(data) {
@@ -67,6 +67,7 @@ printHeader("Registracija",0,false);
 		<input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email" required>
 
 		<input type="submit" class="btn btn-lg btn-primary btn-block" name="btn-signup" value="Registriraj me">
+        <a href="index.php">Prijavite se.</a>
 	</form>
 </div> <!-- /container -->
 <?php
