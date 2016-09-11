@@ -8,7 +8,7 @@ function printHeader($title,$active=0, $nav = true){
 		<title><?php echo $title?></title>
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<link rel="stylesheet" href="node_modules/dragula/dist/dragula.css" type="text/css" />
+        <link rel="icon" type="image/ico" href="favicon.png">
 		<script src="js/jquery-3.0.0.min.js"></script>
 	</head>
 	<body>

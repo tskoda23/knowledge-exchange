@@ -40,8 +40,8 @@ function puni_sve(){
     // output data of each row
 		while($row = $result->fetch_assoc()) {
 			if (!provjeri_postoji_li($row['id'])){
-				echo "<tr><td> " . $row["shortname"]. "</td><td><a href=\"home.php?known=".$row['id']."\" class=\"green\">Znam <i class=\"glyphicon glyphicon-plus
-\"></i></a></td><td><a href=\"home.php?unknown=".$row['id']."\" class=\"red\">Neznam <i class=\"glyphicon glyphicon-plus
+				echo "<tr><td class=\"col-md-6\" > " . $row["shortname"]. "</td><td class=\"col-md-3\"><a href=\"home.php?known=".$row['id']."\" class=\"green\">Znam <i class=\"glyphicon glyphicon-plus
+\"></i></a></td><td class=\"col-md-3\" ><a href=\"home.php?unknown=".$row['id']."\" class=\"red\">Neznam <i class=\"glyphicon glyphicon-plus
 \"></i></a></td></tr>";
 			}
 		}

@@ -30,7 +30,7 @@ function puni_znalce($course_id){
     if ($result->num_rows > 0) {
     // output data of each row
         while($row = $result->fetch_assoc()) {
-                echo "<tr class=\"znalci\"><td></td><td>".$row["username"]." <a href=\"mailto:".$row["email"]."\">".$row["email"]."</a> <i class=\"glyphicon glyphicon-envelope
+                echo "<tr class=\"znalci\"><td class=\"col-md-6\"></td><td class=\"col-md-6\"><a href=\"mailto:".$row["email"]."\">".$row["email"]."</a> <i class=\"glyphicon glyphicon-envelope
 \"></i></a></td></tr>";
         }
     } else {
@@ -50,7 +50,7 @@ function puni_neznam(){
     // output data of each row
         while($row = $result->fetch_assoc()) {
 
-                echo "<tr><td> " . $row["shortname"]. "</td><td><a href=\"neznam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
+                echo "<tr><td class=\"col-md-6\"> " . $row["shortname"]. "</td><td class=\"col-md-6\"><a href=\"neznam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
 \"></i></a></td></tr>";
                 puni_znalce($row['id']);
         }
@@ -66,7 +66,7 @@ printHeader("Neznam",5);
         <table class="table">
             <thead>
                 <tr>
-                    <th>Svi predmeti</th>
+                    <th>Neznam</th>
                     <th>
                         <a id="prikazi_znalce" href="#">Prikaži znalce <i class="glyphicon glyphicon-resize-full"></i></a>
                         <a id="sakrij_znalce" href="#">Sakrij znalce <i class="glyphicon glyphicon-resize-small"></i></a>

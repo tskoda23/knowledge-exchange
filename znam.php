@@ -36,7 +36,7 @@ function puni_znam(){
     // output data of each row
         while($row = $result->fetch_assoc()) {
             if (provjeri_postoji_li($row['id'])){
-                echo "<tr><td> " . $row["shortname"]. "</td><td><a href=\"znam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
+                echo "<tr><td class=\"col-md-6\"> " . $row["shortname"]. "</td><td class=\"col-md-6\"><a href=\"znam.php?ukloni=".$row['id']."\" class=\"green\">Ukloni <i class=\"glyphicon glyphicon-minus
 \"></i></a></td></tr>";
             }
         }
@@ -52,7 +52,7 @@ printHeader("Znam",4);
         <table class="table">
             <thead>
                 <tr>
-                    <th>Svi predmeti</th>
+                    <th>Znam</th>
                 </tr>
             </thead>
 <?php
